@@ -38,6 +38,7 @@ class PyOnnx(PythonPackage):
 
     depends_on("py-setuptools", type="build")
     # @61: in pyproject.toml when @1.15:, but upgraded to @64: due to editable_mode
+    # see https://github.com/onnx/onnx/pull/5827
     depends_on("py-setuptools@64:", type="build", when="@1.15:")
 
     depends_on("protobuf")
